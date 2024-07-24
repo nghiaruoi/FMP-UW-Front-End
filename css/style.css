@@ -1,0 +1,56 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAE2C6;
+    overflow: hidden; /* prevents scrolling because of background text */
+}
+
+.background-text {
+    color: #E6D9C5;
+    font-size: 14vw;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* This value adjust gaps between searchbars */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.search-bar {
+    border: none;
+    border-radius: 70px; /* rounds corners */
+}
+
+.search-bar::placeholder {
+    color: #B0A08D;
+}
+
+.search-bar-1::placeholder {
+    font-size: 3vw; /* Dynamically adjusted font size */
+    text-align:center;
+}
+
+.search-bar-1 {
+    width: 25vw; /* Responsive width */
+    height: 6vw; /* Responsive height */
+    max-height: 20vh; /* Dynamically adjusted max-height */
+}
+
+.search-bar-2 {
+    width: 6vw;
+    height: 6vw;
+    max-height: 20vh;
+}
+
+.search-bar-2::placeholder {
+    font-size: 3vw;
+    text-align:center;
+}
