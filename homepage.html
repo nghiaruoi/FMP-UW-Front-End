@@ -1,16 +1,42 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Eugene Cheung, ">
+    <meta name="author" content="Eugene Cheung">
     <meta name="description" content="RMP-UW Homepage">
     <title>Homepage</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <p class="background-text">KNOW YOUR PROFESSORS BEFORE UW RELEASE</p>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">FMP</a>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            <ul class="nav-menu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <p class="background-text">BE THE FIRST TO KNOW...</p>
     <div class="search-container">
-        <input type="search" class="search-bar search-bar-1" placeholder="insert course...">
-        <input type="search" class="search-bar search-bar-2" placeholder="A, B...">
+        <div class="search-bar-wrapper">
+            <button class="search-button">
+                <i class="search-icon"></i>
+            </button>
+            <input type="search" class="search-bar search-bar-1" placeholder="insert course...">
+        </div>
+        <div>
+            <input type="search" class="search-bar search-bar-2" placeholder="A, B...">
+        </div>
     </div>
 </body>
+</html>

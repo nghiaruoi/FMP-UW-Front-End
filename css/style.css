@@ -1,3 +1,4 @@
+/* General Reset */
 html, body {
     height: 100%;
     margin: 0;
@@ -5,52 +6,175 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: #EAE2C6;
-    overflow: hidden; /* prevents scrolling because of background text */
+    overflow: hidden; /* Prevents scrolling because of background text */
 }
 
+/* Navbar Styling */
+.navbar {
+    background-color: #39275B; /* Updated background color */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
+
+/* Logo styling */
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'K2D', sans-serif; /* Updated font family */
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Nav menu styling */
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu li a {
+    color: white;
+    padding: 20px 15px;
+    display: block;
+    font-size: 18px;
+}
+
+/* Hide checkbox for menu toggle */
+#menu-toggle {
+    display: none;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #39275B; /* Keep consistent with navbar background color */
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-menu li {
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        padding: 15px 0;
+    }
+
+    /* Display the hamburger menu */
+    .hamburger {
+        display: block;
+    }
+
+    /* Show the menu when the checkbox is checked */
+    #menu-toggle:checked + .hamburger + .nav-menu {
+        display: flex;
+    }
+}
+
+/* Background Text Styling */
 .background-text {
     color: #E6D9C5;
     font-size: 14vw;
     text-align: center;
 }
 
+/* Search Container and Bars */
 .search-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* This value adjust gaps between searchbars */
+    gap: 30px; /* Adjusts gaps between search bars */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.search-bar-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .search-bar {
     border: none;
-    border-radius: 70px; /* rounds corners */
+    border-radius: 70px;
+    padding: 0.5vw 1vw; /* Adjust padding */
+    font-size: 2vw; /* Adjust font size */
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    color: black;
 }
 
 .search-bar::placeholder {
     color: #B0A08D;
 }
 
-.search-bar-1::placeholder {
-    font-size: 3vw; /* Dynamically adjusted font size */
-    text-align:center;
+.search-bar-1 {
+    width: 25vw;
+    height: 6vw;
+    max-height: 20vh;
 }
 
-.search-bar-1 {
-    width: 25vw; /* Responsive width */
-    height: 6vw; /* Responsive height */
-    max-height: 20vh; /* Dynamically adjusted max-height */
+.search-bar-1::placeholder {
+    font-size: 2.7vw; /* Adjust font size */
+    padding-top: 0.5vw; /* Adjust padding */
+    text-align: right;
 }
 
 .search-bar-2 {
     width: 6vw;
     height: 6vw;
     max-height: 20vh;
+    padding: 0.5vw; /* Add padding */
+    font-size: 1.5vw; /* Ensure font size is appropriate */
+    box-sizing: border-box; /* Include padding in width/height calculations */
 }
 
 .search-bar-2::placeholder {
-    font-size: 3vw;
-    text-align:center;
+    font-size: 1.5vw;
+    color: #B0A08D;
+}
+
+/* Search Button and Icon */
+.search-button {
+    position: absolute;
+    left: 0.5vw;
+    width: 3vw; /* Adjust width */
+    height: 3vw; /* Adjust height */
+    border: none;
+    border-radius: 50%;
+    background: none; /* Remove background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 100%; /* Ensure the icon fills the button */
+    height: 100%; /* Ensure the icon fills the button */
+    background: url('../img/search-icon.png') no-repeat center center;
+    background-size: contain; /* Ensure the icon scales correctly */
 }
