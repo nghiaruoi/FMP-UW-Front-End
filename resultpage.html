@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Rating Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/Favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: "Titillium Web", sans-serif;
+            background-color: #EAE2C6;
+            margin: 0;
+            padding: 50px;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+        p {
+            margin: 10px 0 30px;
+            font-size: 24px;
+            color: #666;
+        }
+        .box-container {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        .box {
+            background-color: #ede8d5;
+            padding: 50px;
+            width: 48%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .rating {
+            font-size: 72px;
+            font-weight: bold;
+        }
+        .rating-info {
+            font-size: 24px;
+            color: #666;
+        }
+        .stat-row {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-label {
+            font-size: 20px;
+            color: #666;
+        }
+        .stat-value {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        button {
+            background-color: #4A4A7F;
+            color: white;
+            border: none;
+            padding: 20px 30px;
+            margin-top: 30px;
+            cursor: pointer;
+            font-size: 24px;
+            align-self: flex-start;
+        }
+        .coming-soon {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Professor Name</h1>
+        <p>Inputted Course in Professor Department</p>
+        <div class="box-container">
+            <div class="box">
+                <div class="rating">5.0<span class="rating-info">/5</span></div>
+                <div class="rating-info">Quality based on numRatings</div>
+                <div class="stat-row">
+                    <div class="stat">
+                        <div class="stat-label">would take again</div>
+                        <div class="stat-value">N/A</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">level of difficulty</div>
+                        <div class="stat-value">5.0</div>
+                    </div>
+                </div>
+                <button>See full Rate My Professor</button>
+            </div>
+            <div class="box">
+                <div class="coming-soon">coming soon!</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
